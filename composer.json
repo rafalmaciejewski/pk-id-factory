@@ -2,7 +2,7 @@
   "name": "pk-id-factory",
   "version": "0.0.1",
   "require": {
-    "php": "^5.6"
+    "php": "^7.1"
   },
   "require-dev": {
     "phpunit/phpunit": "5.7"
