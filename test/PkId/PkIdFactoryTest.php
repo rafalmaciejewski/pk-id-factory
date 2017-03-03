@@ -27,7 +27,7 @@ class PkIdFactoryTest extends \PHPUnit_Framework_TestCase
     public function shouldReturnRandomId(int $inputId)
     {
         $pkId = PkIdFactory::createFromInteger($inputId);
-        $this->assertNotEquals($inputId, $pkId->getId());
+        $this->assertNotEquals(md5($inputId), $pkId->getId());
     }
 
     /**

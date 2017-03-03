@@ -1,10 +1,10 @@
 <?php
 
-namespace PK\Tests\PkId;
+namespace PK\PkId;
 
 /**
  * Class PkId
- * @package PK\Tests\PkId
+ * @package PK\PkId
  */
 class PkId
 {
@@ -22,9 +22,9 @@ class PkId
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getId(): int
+    public function getId(): string
     {
         return md5(rand(0, 1000000));
     }

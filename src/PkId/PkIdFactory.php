@@ -2,8 +2,6 @@
 
 namespace PK\PkId;
 
-use PK\Tests\PkId\PkId;
-
 /**
  * Class PkIdFactory
  * @package PK\PkId
