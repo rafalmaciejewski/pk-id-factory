@@ -1,31 +1,20 @@
 <?php
 
+declare(strict_types=1);
+
 namespace PK\PkId;
 
-/**
- * Class PkId
- * @package PK\PkId
- */
 class PkId
 {
-    /**
-     * @var int
-     */
-    private $id;
+    private int $id;
 
-    /**
-     * @param int $id
-     */
     public function __construct(int $id)
     {
         $this->id = $id;
     }
 
-    /**
-     * @return string
-     */
     public function getId(): string
     {
-        return md5(rand(0, 1000000));
+        return md5((string)rand(0, 1000000));
     }
 }
