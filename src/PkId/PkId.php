@@ -6,6 +6,7 @@ namespace PK\PkId;
 
 class PkId
 {
+    /** @phpstan-ignore-next-line */
     private int $id;
 
     public function __construct(int $id)
