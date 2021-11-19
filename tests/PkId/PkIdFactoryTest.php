@@ -1,22 +1,22 @@
 <?php
 
+declare(strict_types=1);
+
 namespace PK\Tests\PkId;
 
+use PHPUnit\Framework\TestCase;
+use PK\PkId\PkId;
 use PK\PkId\PkIdFactory;
 
-/**
- * Class PkIdFactoryTest
- * @package PK\Tests\PkId
- */
-class PkIdFactoryTest extends \PHPUnit_Framework_TestCase
+class PkIdFactoryTest extends TestCase
 {
     /**
      * @test
      */
-    public function shouldCreatePkIdInstance()
+    public function shouldCreatePkIdInstance(): void
     {
         $pkId = PkIdFactory::createFromInteger(1);
-        $this->assertInstanceOf(PkIdFactory::class, $pkId);
+        $this->assertInstanceOf(PkId::class, $pkId);
     }
 
     /**
@@ -24,10 +24,10 @@ class PkIdFactoryTest extends \PHPUnit_Framework_TestCase
      * @param int $inputId
      * @dataProvider getInputIds
      */
-    public function shouldReturnRandomId(int $inputId)
+    public function shouldReturnRandomId(int $inputId): void
     {
         $pkId = PkIdFactory::createFromInteger($inputId);
-        $this->assertNotEquals(md5($inputId), $pkId->getId());
+        $this->assertNotEquals(md5((string)$inputId), $pkId->getId());
     }
 
     /**
