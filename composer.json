@@ -8,9 +8,13 @@
     "phpunit/phpunit": "5.7"
   },
   "autoload": {
-    "psr-4": {"PK\\": "src/"}
+    "psr-4": {
+      "PK\\": "src/"
+    }
   },
   "autoload-dev": {
-    "psr-4": {"PK\\Tests\\": "tests/"}
+    "psr-4": {
+      "PK\\Tests\\": "tests/"
+    }
   }
 }
