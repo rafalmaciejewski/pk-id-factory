@@ -1,6 +1,6 @@
 {
   "name": "pk/id-factory",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "require": {
     "php": "^7.4|^8.0"
   },
